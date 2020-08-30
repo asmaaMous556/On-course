@@ -1,0 +1,94 @@
+<!-- <ul class="list-group">
+  <li  class="list-group-item ">{{category.name}}
+   <div><button class="btn btn-warning">Edit </button></div>
+  </li>
+  </ul> -->
+
+
+
+  <table class ="table">
+    <thead>
+    <tr>
+            <th>All Categories</th>
+            
+            <th></th>
+    </tr>
+    </thead>
+    <tbody>
+   <tr *ngFor="let category of categories.categories">
+        <td>{{category.name}}</td>
+       
+        <td>
+            <a class="link" href="#"> Edit</a>
+            <a class="link" href="#"> Delete</a>
+        </td>
+
+    </tr>  
+    </tbody>
+</table> 
+
+
+
+
+
+
+
+<!-- <div class="stick-top">
+    <div class="row">
+    <div class="col-6">
+   <a *ngFor="let category of categories.categories" class="list-group-item">{{category.name}}</a>
+   
+  </div> -->
+    
+
+    <!-- <div class="col-9"> 
+        <div class="row">
+           <ng-container *ngFor="let p of FilteredProducts ; let i= index ">
+              <div class="col">  
+                <product-card [product]="p" [shopping-cart]="cart"></product-card>
+              </div>
+             <div *ngIf="(i+1) % 2===0" class="w-100" ></div>
+           </ng-container>
+           </div>         
+         </div>
+      </div>
+  </div>    -->
+     
+    
+    
+    
+    
+    
+    
+   
+
+
+
+
+
+
+
+<!-- <div class="list-group">
+    <a routerLink="/"
+    [class.active]="!category"
+    class="list-group-item list-group-item-action"
+    > All Categories</a> 
+    
+   
+   <a 
+    routerLink="/" 
+    [queryParams]="{category : c.key}"
+    *ngFor="let c of (categories$ |async)" 
+    class="list-group-item"
+    [class.active]="category === c.key ">
+   {{c.payload.val().name}}
+       </a>
+    </div> -->
+    
+    
+    
+    
+    
+    
+    
+   

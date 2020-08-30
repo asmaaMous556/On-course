@@ -1,0 +1,69 @@
+<div class="card" style="width: 20rem;">
+    <div class="card-body">
+  <form  #f="ngForm" (ngSubmit)="login(f.value)" class="form-group" >
+    <h2 class="text-center">Log in</h2>       
+    
+    <div class="form-group">
+        <input 
+        required
+        ngModel name="email" #email="ngModel"
+         type="text" class="form-control" placeholder="E-mail" >
+
+         <div *ngIf="email.touched && email.invalid"  class="alert alert-danger"> 
+        <div *ngIf="email.errors?.required"> E-mail is required</div>
+        
+            
+        </div>
+    </div>
+    <div class="form-group">
+        <input
+        required
+        ngModel name="password" #password="ngModel"
+         type="password" class="form-control" placeholder="Password">
+
+         <div *ngIf="password.touched && password.invalid"  class="alert alert-danger"> 
+            <div *ngIf="password.errors?.required"> Password is required</div>
+            <div *ngIf="password.errors?.min"> password should be at least 5 characters</div>     
+            </div>
+    </div>
+    <div class="form-group">
+        <button  class="btn btn-primary">Log in</button>
+    </div>
+    
+</form>
+</div>
+</div>
+
+
+<!-- <div class="card">
+    <h4 class="card-header">
+        Login
+    </h4>
+    <div class="card-body">
+     <form novalidate="" 
+     ng-reflect-form="[object Object]"
+      class="ng-pristine ng-invalid ng-touched">
+            <div class="form-group">
+     <label for="username">Username</label><input 
+     class="form-control ng-pristine ng-invalid ng-touched" 
+     formcontrolname="username" type="text" 
+     ng-reflect-klass="form-control" ng-reflect-ng-class="[object Object]" ng-reflect-name="username">
+
+</div>
+<div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control 
+      ng-pristine ng-invalid
+       ng-touched"
+        formcontrolname="password" type="password" 
+        ng-reflect-klass="form-control"
+         ng-reflect-ng-class="[object Object]" ng-reflect-name="password">
+    
+  </div>
+  <div class="form-group"><button class="btn btn-primary"> Login </button>
+    <a class="btn btn-link" routerlink="../register" ng-reflect-router-link="../register" href="/account/register">Register</a>
+</div>
+
+</form>
+</div>
+</div> -->

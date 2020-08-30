@@ -1,0 +1,23 @@
+.btn-primary{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+#mngbtn{
+    margin-bottom: 40px;
+    margin-left: 300px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #e2e6ea;
+    border-color: #dae0e5
+}
+
+.btn-warning{
+    margin-left: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.card{
+    margin-top: 20px
+}

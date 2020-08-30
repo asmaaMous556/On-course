@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col-md-6">
+
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+    <div class="form-group">
+      <label for="courseName"> Course Name</label>
+      <input 
+      type="text" 
+      required
+      ngModel name="courseName" #courseName="ngModel"
+      class="form-control" placeholder="Course Name  ">
+
+      <div *ngIf="courseName.touched && courseName.invalid"  class="alert alert-danger"> 
+      <div *ngIf="courseName.errors?.required"> Course Name is required
+      </div>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Description"> Description </label>
+      <input type="text"
+      required
+      ngModel name="Description" #Description="ngModel"
+       class="form-control"  placeholder=" Description">
+       
+    </div>
+
+    <div class="form-group" >
+      <label for="category">Category</label>
+      <select ngModel
+      name="category"
+      #category="ngModel" 
+      required
+       id="category"  class="form-control">
+          <option value=""></option>
+          <option *ngFor="let category of categories" [value]="category.key">
+              {{category.name}}</option>
+          </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Points"> Points </label>
+        <input 
+        type="text"
+        required
+        ngModel name="points" #points="ngModel"
+         class="form-control"  placeholder="Points">
+
+         <div *ngIf="points.touched && points.invalid"  class="alert alert-danger"> 
+          <div *ngIf="points.errors?.required"> Points are required</div>   
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label for="imageUrl">imageUrl</label>
+        <input 
+         id="imageUrl"
+         ngModel name="imageUrl" #imageUrl="ngModel"
+          type="text" class="form-control">
+          
+    </div>
+
+    <button class="btn btn-primary">Save</button>
+
+      </form>
+</div>
+</div>
+
+
+<!-- <div class="col-md-6">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="" >
+        <div class="card-body">
+          <h5 class="card-title">Name</h5>
+          <p class="card-text"> Description</p>
+          <p class="card-text">Points</p>
+        </div>
+      </div> 
+</div> -->
